@@ -76,7 +76,7 @@
                                 <?php }else{ ?>
                                 <span class="label label-primary"><?php echo $row->stock; ?></span>
                                 <?php } ?>
-                                <span class="label label-default"><?php echo $row->product_satuan; ?></span>
+                                <span class="label label-default"><?php echo $row->product_client_name; ?></span>
                                 </td>
                                 <td>
                                     <?php if($_SESSION['role']=="Admin"){ ?>

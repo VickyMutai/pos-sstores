@@ -18,7 +18,7 @@
         $sell = $_POST['sell_price'];
         $stock = $_POST['stock'];
         $min_stock = $_POST['min_stock'];
-        $satuan = $_POST['satuan'];
+        $client_name = $_POST['client_name'];
         $desc = $_POST['description'];
 
 
@@ -68,8 +68,8 @@
                         $product_img = $img_new;
                         if(!isset($error)){
 
-                            $insert = $pdo->prepare("INSERT INTO product(product_code,product_name,product_category,sell_price,stock,min_stock,product_satuan,description,img)
-                            values(:product_code,:product_name,:product_category,:sell_price,:stock,:min_stock,:satuan,:desc,:img)");
+                            $insert = $pdo->prepare("INSERT INTO product(product_code,product_name,product_category,sell_price,stock,min_stock,product_client_name,description,img)
+                            values(:product_code,:product_name,:product_category,:sell_price,:stock,:min_stock,:client_name,:desc,:img)");
 
                             $insert->bindParam(':product_code', $code);
                             $insert->bindParam(':product_name', $product);
@@ -77,7 +77,7 @@
                             $insert->bindParam(':sell_price', $sell);
                             $insert->bindParam(':stock', $stock);
                             $insert->bindParam(':min_stock', $min_stock);
-                            $insert->bindParam(':satuan', $satuan);
+                            $insert->bindParam(':client_name', $client_name);
                             $insert->bindParam(':desc', $desc);
                             $insert->bindParam(':img', $product_img);
 
@@ -194,7 +194,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Client</label>
-                            <select class="form-control" name="satuan" required>
+                            <select class="form-control" name="client_name" required>
                                 <?php
                                 $select = $pdo->prepare("SELECT * FROM client");
                                 $select->execute();

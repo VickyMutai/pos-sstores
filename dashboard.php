@@ -129,7 +129,7 @@
                       <tbody>
                           <?php
                           $no = 1;
-                          $select = $pdo->prepare("SELECT product_code,product_name,price,product_satuan,sum(qty) as q, sum(qty*price) as total FROM
+                          $select = $pdo->prepare("SELECT product_code,product_name,price,product_client_name,sum(qty) as q, sum(qty*price) as total FROM
                           invoice_detail GROUP BY product_id ORDER BY sum(qty) DESC LIMIT 30");
                           $select->execute();
                           while($row=$select->fetch(PDO::FETCH_OBJ)){
@@ -139,7 +139,7 @@
                               <td><?php echo $row->product_name; ?></td>
                               <td><?php echo $row->product_code; ?></td>
                               <td><?php echo $row->q; ?>
-                              <span><?php echo $row->product_satuan; ?></span>
+                              <span><?php echo $row->product_client_name; ?></span>
                               </td>
                               <td>Rp <?php echo number_format($row->price);?></td>
                               <td>Rp <?php echo number_format($row->total); ?></td>
