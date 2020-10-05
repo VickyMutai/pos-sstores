@@ -97,7 +97,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Today's Income</span>
-              <span class="info-box-number"><small>Rp. <?php echo number_format($total,0); ?></small></span>
+              <span class="info-box-number"><small>Ksh. <?php echo number_format($total,0); ?></small></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -141,8 +141,8 @@
                               <td><?php echo $row->q; ?>
                               <span><?php echo $row->product_client_name; ?></span>
                               </td>
-                              <td>Rp <?php echo number_format($row->price);?></td>
-                              <td>Rp <?php echo number_format($row->total); ?></td>
+                              <td>Ksh <?php echo number_format($row->price);?></td>
+                              <td>Ksh <?php echo number_format($row->total); ?></td>
                               </tr>
 
                         <?php

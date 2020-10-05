@@ -75,7 +75,7 @@
                                 <td><?php echo $no++ ; ?></td>
                                 <td class="text-uppercase"><?php echo $row->cashier_name; ?></td>
                                 <td><?php echo $row->order_date; ?></td>
-                                <td>Rp. <?php echo number_format($row->total); ?></td>
+                                <td>Ksh. <?php echo number_format($row->total); ?></td>
                                 <td>
                                     <?php if($_SESSION['role']=="Admin"){ ?>
                                     <a href="order.php?id=<?php echo $row->invoice_id; ?>" onclick="return confirm('Delete Transaction?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>

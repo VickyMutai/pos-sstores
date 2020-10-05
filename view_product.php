@@ -38,7 +38,7 @@
                     <li class="list-group-item"> <b>Product Code</b>     :<span class="label badge pull-right"><?php echo $row->product_code; ?></span></li>
                     <li class="list-group-item"><b>Product Name</b>    :<span class="label label-info pull-right"><?php echo $row->product_name; ?></span></li>
                     <li class="list-group-item"><b>Product Category</b>        :<span class="label label-primary pull-right"><?php echo $row->product_category; ?></span></li>
-                    <li class="list-group-item"><b>Price</b>     :<span class="label label-warning pull-right">Rp. <?php echo $row->sell_price; ?></span></li>
+                    <li class="list-group-item"><b>Price</b>     :<span class="label label-warning pull-right">Ksh. <?php echo $row->sell_price; ?></span></li>
                     <li class="list-group-item"><b>Stock </b>          :<span class="label label-default pull-right"><?php echo $row->stock; ?></span></li>
                     <li class="list-group-item"><b>Minimum Stock </b>   :<span class="label label-default pull-right"><?php echo $row->min_stock; ?></span></li>
                     <li class="list-group-item"><b>Client_Name</b>               :<span class="label label-default pull-right"><?php echo $row->client_name; ?></span></li>

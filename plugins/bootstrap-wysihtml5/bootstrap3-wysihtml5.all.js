@@ -5420,7 +5420,7 @@ wysihtml5.dom.getAsDom = (function() {
   var HTML5_ELEMENTS = [
     "abbr", "article", "aside", "audio", "bdi", "canvas", "command", "datalist", "details", "figcaption",
     "figure", "footer", "header", "hgroup", "keygen", "mark", "meter", "nav", "output", "progress",
-    "rp", "rt", "ruby", "svg", "section", "source", "summary", "time", "track", "video", "wbr"
+    "Ksh", "rt", "ruby", "svg", "section", "source", "summary", "time", "track", "video", "wbr"
   ];
 
   return function(html, context) {

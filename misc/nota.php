@@ -74,8 +74,8 @@ while($item = $select->fetch(PDO::FETCH_OBJ)){
     $pdf->Cell(27,5,$item->product_name,1,0,'L');
     $pdf->Cell(7,5,$item->qty,1,0,'C');
     $pdf->SetFont('Arial','B',7);
-    $pdf->Cell(18,5,'Rp '.number_format($item->price),1,0,'R');
-    $pdf->Cell(18,5,'Rp '.number_format($item->total),1,1,'R');
+    $pdf->Cell(18,5,'Ksh '.number_format($item->price),1,0,'R');
+    $pdf->Cell(18,5,'Ksh '.number_format($item->total),1,1,'R');
 }
 
 //////////////////////////////////////////////
@@ -84,21 +84,21 @@ $pdf->SetFont('Arial','Bi',8);
 $pdf->Cell(25,8 ,'Total  :',0,0,'C');
 
 $pdf->SetFont('Arial','BI',7);
-$pdf->Cell(1,8 ,'Rp ' . number_format($row->total),0,1,'C');
+$pdf->Cell(1,8 ,'Ksh ' . number_format($row->total),0,1,'C');
 
 $pdf->SetX(43);
 $pdf->SetFont('Arial','BI',7);
 $pdf->Cell(25,4 ,'Paid   :',0,0,'C');
 
 $pdf->SetFont('Arial','BI',7);
-$pdf->Cell(1,4 ,'Rp '. number_format($row->paid),0,1,'C');
+$pdf->Cell(1,4 ,'Ksh '. number_format($row->paid),0,1,'C');
 
 $pdf->SetX(43);
 $pdf->SetFont('Arial','BI',8);
 $pdf->Cell(25,8 ,'Due    :',0,0,'C');
 
 $pdf->SetFont('Arial','BI',7);
-$pdf->Cell(1,8 ,'Rp '. number_format($row->due),0,1,'C');
+$pdf->Cell(1,8 ,'Ksh '. number_format($row->due),0,1,'C');
 
 //////////////////////////////////////////////
 $pdf->SetY(120);
