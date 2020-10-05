@@ -7,7 +7,7 @@
   <title>SStores | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="shortcut icon" href="img/logo1.jpg">
+  <link rel="shortcut icon" href="img/logo.jpg">
   <!--Sweetalert Plugin --->
   <script src="bower_components/sweetalert/sweetalert.js"></script>
   <!-- AdminLTE App -->
@@ -29,9 +29,9 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
 
-  <link rel="stylesheet" href="dist/css/skins/skin-green.min.css">
+  <link rel="stylesheet" href="dist/css/skins/skin-green.css">
 
   <!-- Google Font -->
   <link rel="stylesheet"
@@ -61,7 +61,7 @@
     <header class="main-header">
 
       <!-- Logo -->
-      <a href="index2.html" class="logo">
+      <a href="#" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>S</b>POS</span>
         <!-- logo for regular state and mobile devices -->

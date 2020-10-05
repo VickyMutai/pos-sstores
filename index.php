@@ -45,7 +45,7 @@ if(isset($_POST['btn_login'])){
   <!-- Ionicons -->
   <link rel="stylesheet" href="ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
 
@@ -62,7 +62,7 @@ if(isset($_POST['btn_login'])){
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page lockscreen">
 <div class="login-box">
   <div class="login-logo">
     <a href="index.php"><b>Sambai Stores|</b>POS</a>

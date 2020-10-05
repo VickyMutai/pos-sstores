@@ -104,11 +104,8 @@ $pdf->Cell(1,8 ,'Ksh '. number_format($row->due),0,1,'C');
 $pdf->SetY(120);
 $pdf->SetX(7);
 $pdf->SetFont('Arial','BU',5);
-$pdf->Cell(75,4 ,'Returns are not accepted without a purchase note',0,1,'L');
+$pdf->Cell(75,4 ,'THANK YOU FOR DOING BUSINESS WITH US',0,1,'L');
 
-$pdf->SetFont('Arial','BU',5);
-$pdf->Cell(45,4 ,'
-Refunds are accepted a maximum of 3 days after purchase of goods are not received without a purchase note',0,0,'C');
 
 
 
