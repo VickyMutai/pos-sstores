@@ -13,7 +13,7 @@
 
 
     error_reporting(0);
-    date_default_timezone_set('Asia/Makassar');
+    date_default_timezone_set('Africa/Nairobi');
 
     function fill_product($pdo){
       $output= '';
@@ -43,7 +43,7 @@
       $arr_product_name = $_POST['productname'];
       $arr_product_stock = $_POST['productstock'];
       $arr_product_qty = $_POST['quantity'];
-      $arr_product_satuan = $_POST['client_name'];
+      $arr_client_name = $_POST['clientname'];
       $arr_product_price = $_POST['productprice'];
       $arr_product_total =  $_POST['producttotal'];
 
@@ -92,14 +92,14 @@
 
 
             $insert = $pdo->prepare("INSERT INTO invoice_detail(invoice_id, product_id, product_code, product_name, qty, client_name, price, total, order_date)
-            values(:invid, :productid, :productcode, :productname, :qty, :clientname, :price, :total, :orderdate)");
+            values(:invid, :productid, :productcode, :productname, :qty, :client_name, :price, :total, :orderdate)");
 
             $insert->bindParam(':invid',  $invoice_id);
             $insert->bindParam(':productid',   $arr_product_id[$i]);
             $insert->bindParam(':productcode',   $arr_product_code[$i]);
             $insert->bindParam(':productname', $arr_product_name[$i]);
             $insert->bindParam(':qty', $arr_product_qty[$i]);
-            $insert->bindParam(':clientname', $arr_product_satuan[$i]);
+            $insert->bindParam(':client_name', $arr_client_name[$i]);
             $insert->bindParam(':price',  $arr_product_price[$i]);
             $insert->bindParam(':total',   $arr_product_total[$i]);
             $insert->bindParam(':orderdate',  $order_date);
@@ -180,8 +180,8 @@
                           <th>Name</th>
                           <th>Stock</th>
                           <th>Price</th>
-                          <th>Amount</th>
-                          <th>Client_Name</th>
+                          <th>Quantity</th>
+                          <th>Client Name</th>
                           <th>Total</th>
                           <th>
                             <button type="button" name="addOrder" class="btn btn-success btn-sm btn_addOrder" required><span>
@@ -271,7 +271,7 @@
         html+='<td><input type="text" class="form-control productstock" style="width:50px;" name="productstock[]" readonly></td>';
         html+='<td><input type="text" class="form-control productprice" style="width:100px;" name="productprice[]" readonly></td>';
         html+='<td><input type="number" min="1" max="50" class="form-control quantity_product" style="width:100px;" name="quantity[]" required></td>';
-        html+='<td><input type="text" class="form-control productsatuan" style="width:100px;" name="clientname[]" readonly></td>';
+        html+='<td><input type="text" class="form-control clientname" style="width:100px;" name="clientname[]" readonly></td>';
         html+='<td><input type="text" class="form-control producttotal" style="width:150px;" name="producttotal[]" readonly></td>';
         html+='<td><button type="button" name="remove" class="btn btn-danger btn-sm btn-remove"><i class="fa fa-remove"></i></button></td>'
 

@@ -26,11 +26,11 @@
             <span class="info-box-icon bg-aqua"><i class="fa fa-archive"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Supplies are running low</span>
+              <span class="info-box-text">Supplies Status</span>
               <?php if($total1==true){ ?>
               <span class="info-box-number"><small><?php echo $row->total;?></small></span>
               <?php }else{?>
-              <span class="info-box-text"><strong>No supplies</strong></span>
+              <span class="info-box-text"><strong>No supplies running low</strong></span>
               <?php }?>
             </div>
             <!-- /.info-box-content -->
@@ -120,7 +120,7 @@
                               <th>No</th>
                               <th>Product</th>
                               <th>Code</th>
-                              <th>CodeSold</th>
+                              <th>Items Sold</th>
                               <th>Price</th>
                               <th>Income</th>
                           </tr>
@@ -129,7 +129,7 @@
                       <tbody>
                           <?php
                           $no = 1;
-                          $select = $pdo->prepare("SELECT product_code,product_name,price,product_client_name,sum(qty) as q, sum(qty*price) as total FROM
+                          $select = $pdo->prepare("SELECT product_code,product_name,price,client_name,sum(qty) as q, sum(qty*price) as total FROM
                           invoice_detail GROUP BY product_id ORDER BY sum(qty) DESC LIMIT 30");
                           $select->execute();
                           while($row=$select->fetch(PDO::FETCH_OBJ)){
@@ -139,7 +139,7 @@
                               <td><?php echo $row->product_name; ?></td>
                               <td><?php echo $row->product_code; ?></td>
                               <td><?php echo $row->q; ?>
-                              <span><?php echo $row->product_client_name; ?></span>
+                              <span><?php echo $row->client_name; ?></span>
                               </td>
                               <td>Ksh <?php echo number_format($row->price);?></td>
                               <td>Ksh <?php echo number_format($row->total); ?></td>

@@ -29,7 +29,7 @@
             if($select->rowCount() > 0 ){
                 echo'<script type="text/javascript">
                     jQuery(function validation(){
-                    swal("Warning", "Kode Produk Sudah Terdaftar", "warning", {
+                    swal("Warning", "Product Code Already Registered", "warning", {
                     button: "Continue",
                         });
                     });
@@ -37,7 +37,7 @@
             }elseif (strlen($code)>6 || strlen($code)<6) {
                     echo'<script type="text/javascript">
                     jQuery(function validation(){
-                    swal("Warning", "Kode Harus 6 Karakter Sesuai Aturan", "warning", {
+                    swal("Warning", "Code Must Be 6 Characters As Per the Rules", "warning", {
                     button: "Continue",
                         });
                     });
@@ -84,7 +84,7 @@
                             if($insert->execute()){
                                 echo'<script type="text/javascript">
                                         jQuery(function validation(){
-                                        swal("Success", "Produk Berhasil Disimpan", "success", {
+                                        swal("Success", "Product Successfully Saved", "success", {
                                         button: "Continue",
                                             });
                                         });
@@ -92,7 +92,7 @@
                             }else{
                                 echo '<script type="text/javascript">
                                         jQuery(function validation(){
-                                        swal("Error", "Terjadi Kesalahan", "error", {
+                                        swal("Error", "There is an error", "error", {
                                         button: "Continue",
                                             });
                                         });
@@ -102,7 +102,7 @@
                         }else{
                             echo '<script type="text/javascript">
                                         jQuery(function validation(){
-                                        swal("Error", "Terjadi Kesalahan", "error", {
+                                        swal("Error", "There is an error", "error", {
                                         button: "Continue",
                                             });
                                         });
@@ -114,7 +114,7 @@
             }else{
                 $error = '<script type="text/javascript">
                 jQuery(function validation(){
-                swal("Error", "Tolong Upload Gambar Dengan Format : jpg, jpeg, png, gif", "error", {
+                swal("Error", "Please Upload Image With Format : jpg, jpeg, png, gif", "error", {
                 button: "Continue",
                     });
                 });
@@ -132,7 +132,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Produk
+        Product
       </h1>
       <hr>
     </section>
@@ -141,25 +141,25 @@
     <section class="content container-fluid">
         <div class="box box-success">
             <div class="box-header with-border">
-                <h3 class="box-title">Masukan Produk Baru</h3>
+                <h3 class="box-title">Enter New Products</h3>
             </div>
             <form action="" method="POST" name="form_product"
                 enctype="multipart/form-data" autocomplete="off">
                 <div class="box-body">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Kode Produk</label><br>
-                            <span class="text-muted">*Pastikan Kode Produk Sesuai</span>
+                            <label for="">Product Code</label><br>
+                            <span class="text-muted">*Make sure the product code matches</span>
                             <input type="text" class="form-control"
                             name="product_code">
                         </div>
                         <div class="form-group">
-                            <label for="">Nama Produk</label>
+                            <label for="">Product Name</label>
                             <input type="text" class="form-control"
                             name="product_name">
                         </div>
                         <div class="form-group">
-                            <label for="">Kategori</label>
+                            <label for="">Category</label>
                             <select class="form-control" name="category" required>
                                 <?php
                                 $select = $pdo->prepare("SELECT * FROM category");
@@ -174,7 +174,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Harga Jual</label>
+                            <label for="">Price</label>
                             <input type="number" class="form-control"
                             name="sell_price" required>
                         </div>
@@ -182,13 +182,13 @@
 
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Persediaan</label><br>
-                            <span class="text-muted">*Satuan Sesuai Produk</span>
+                            <label for="">Stock</label><br>
+                            <span class="text-muted">*Unit according to product</span>
                             <input type="number" min="1" step="1"
                             class="form-control" name="stock" required>
                         </div>
                         <div class="form-group">
-                            <label for="">Persediaan Minimal</label><br>
+                            <label for="">Minimal Stock</label><br>
                             <input type="number" min="1" step="1"
                             class="form-control" name="min_stock" required>
                         </div>
@@ -208,7 +208,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Deskripsi Singkat Produk</label>
+                            <label for="">Product Description</label>
                             <textarea name="description" id="description"
                             cols="30" rows="10" class="form-control" required></textarea>
                         </div>
@@ -216,7 +216,7 @@
 
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Gambar Produk</label><br>
+                            <label for="">Product Image</label><br>
                             <br>
                             <input type="file" class="input-group"
                             name="product_img" onchange="readURL(this);" required> <br>
@@ -227,8 +227,8 @@
 
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary"
-                    name="add_product">Tambahkan Produk</button>
-                    <a href="product.php" class="btn btn-warning">Kembali</a>
+                    name="add_product">Add Product</button>
+                    <a href="product.php" class="btn btn-warning">Back</a>
                 </div>
             </form>
         </div>

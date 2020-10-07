@@ -31,9 +31,9 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="dist/css/AdminLTE.css">
 
-  <link rel="stylesheet" href="dist/css/skins/skin-green.min.css">
+  <link rel="stylesheet" href="dist/css/skins/skin-green.css">
 
   <!-- Google Font -->
   <link rel="stylesheet"

@@ -163,7 +163,7 @@ h6,
 }
 /* General Links */
 a {
-  color: #b23978;
+  color: blue;
 }
 a:hover,
 a:active,
@@ -1612,12 +1612,12 @@ a:focus {
   color: #ffffff;
 }
 .box.box-solid.box-info {
-  border: 1px solid #b23978;
+  border: 1px solid #dd4b39;
 }
 .box.box-solid.box-info > .box-header {
   color: #ffffff;
-  background: #b23978;
-  background-color: #b23978;
+  background: #dd4b39;
+  background-color: #dd4b39;
 }
 .box.box-solid.box-info > .box-header a,
 .box.box-solid.box-info > .box-header .btn {
@@ -2233,17 +2233,17 @@ a:focus {
   background-color: #e7e7e7;
 }
 .btn-primary {
-  background-color: #b23978;
-  border-color: #b23978;
+  background-color: #3c8dbc;
+  border-color: #3c8dbc;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary.hover {
-  background-color: #b23978;
+  background-color: #3c8dbc;
 }
 .btn-success {
-  background-color: #b23978;
-  border-color: #b23978;
+  background-color: #3c8dbc;
+  border-color: #3c8dbc;
 }
 .btn-success:hover,
 .btn-success:active,

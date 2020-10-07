@@ -17,7 +17,7 @@
     $sell_db = $row['sell_price'];
     $stock_db = $row['stock'];
     $min_stock_db = $row['min_stock'];
-    $client_name = $row['client_name'];
+    $client_db = $row['client_name'];
     $desc_db = $row['description'];
     $product_img = $row['img'];
 
@@ -32,7 +32,7 @@
         $sell_req = $_POST['sell_price'];
         $stock_req = $_POST['stock'];
         $min_stock_req = $_POST['min_stock'];
-        $satuan_req = $_POST['satuan'];
+        $client_req = $_POST['client_name'];
         $desc_req = $_POST['description'];
                 $img = $_FILES['product_img']['name'];
                 if(!empty($img)){

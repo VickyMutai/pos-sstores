@@ -83,7 +83,7 @@ if(isset($_POST['btn_login'])){
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-4">
-            <button type="submit" class="text-muted text-center btn-block btn btn-primary btn-rect" name="btn_login">Log In</button>
+            <button type="submit" class="text-muted text-center btn-block btn btn-primary btn-rect" name="btn_login" style="color:black; margin-left: 100px;">Log In</button>
         </div>
       </div>
       <?php
